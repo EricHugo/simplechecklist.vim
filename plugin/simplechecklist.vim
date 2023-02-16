@@ -11,6 +11,8 @@ function! SimplechecklistToggle(lineNum)
         let lineContent = getline(a:lineNum)
         if lineContent =~? '^\s*-> \[ \]'
             call setline(a:lineNum, substitute(lineContent, '-> \[ \]', '-> \[x\]', ""))
+        elseif lineContent =~? '^\s*-> \[x\]'
+            call setline(a:lineNum, substitute(lineContent, '-> \[x\]', '-> \[ \]', ""))
         endif
     endif
 endfunction
