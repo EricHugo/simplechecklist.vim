@@ -20,6 +20,8 @@ endfunction
 
 function! s:simplechecklistCheck(lineNum)
     let lineContent = getline(a:lineNum)
+    let prevLineContent = getline(a:lineNum - 1)
+    echom prevLineContent
     if lineContent =~? '^\s*-> \['
         return 1
     else
@@ -36,7 +38,9 @@ endfunction
 
 function! s:simplechecklistCreateEntry(lineNum)
     let lineContent = getline(a:lineNum)
-    let checkifiedLine = s:simplechecklist_format . lineContent
+    let indentation = matchstr(lineContent, '^\s*')
+    let lineContentNoindent = substitute(lineContent, '^\s*', '', '')
+    let checkifiedLine = indentation . s:simplechecklist_format . lineContentNoindent 
     call setline(a:lineNum, checkifiedLine)
     call feedkeys("\<esc>A", "n")
 endfunction
