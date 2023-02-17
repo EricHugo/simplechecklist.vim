@@ -38,6 +38,7 @@ function! s:simplechecklistCreateEntry(lineNum)
     let lineContent = getline(a:lineNum)
     let checkifiedLine = s:simplechecklist_format . lineContent
     call setline(a:lineNum, checkifiedLine)
+    call feedkeys("\<esc>A", "n")
 endfunction
 
 
