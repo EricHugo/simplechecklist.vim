@@ -4,4 +4,7 @@
     -> [x] Complete children upon completion of parents
         -> [x] Ensure that toggling on parent does not toggle off child
 -> [x] Implement visual mode toggling
--> [ ] Add README
+-> [x] Add README
+    -> [ ] Include small gif showing it in use
+-> [ ] Make syntax highlights more specific
+-> [ ] Add a :help simplechecklist
