@@ -73,3 +73,4 @@ augroup SimpleChecklisAutocmds
 augroup END
 
 nnoremap <silent> <leader>z :call SimplechecklistToggle(line('.'), 0, '', 0)<CR>
+vnoremap <silent> <leader>z :call SimplechecklistToggle(line('.'), 0, '', 0)<CR>
