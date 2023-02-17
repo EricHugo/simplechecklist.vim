@@ -1,0 +1,3 @@
+-> [x] Move cursor to end of new entry
+-> [ ] Preserve indentation
+    -> [ ] Complete children upon completion of parents
