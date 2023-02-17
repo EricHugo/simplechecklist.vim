@@ -29,9 +29,7 @@ endfunction
 
 function! s:simplechecklistSpawn(lineNum)
     let hasChecklistAtt = s:simplechecklistCheck(a:lineNum)
-    if hasChecklistAtt
-        " do nothing
-    else
+    if !hasChecklistAtt
         call s:simplechecklistCreateEntry(a:lineNum)
     endif
 endfunction
