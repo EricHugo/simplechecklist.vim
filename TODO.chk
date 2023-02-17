@@ -1,3 +1,6 @@
 -> [x] Move cursor to end of new entry
--> [ ] Preserve indentation
-    -> [ ] Complete children upon completion of parents
+-> [x] Don't put indentation whitespace present in entry
+-> [x] Preserve indentation
+    -> [x] Complete children upon completion of parents
+        -> [x] Ensure that toggling on parent does not toggle off child
+-> [x] Implement visual mode toggling
