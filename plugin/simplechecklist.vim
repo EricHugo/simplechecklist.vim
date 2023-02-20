@@ -60,7 +60,7 @@ endfunction
 function! s:simplechecklistCreateEntry(lineNum)
     let lineContent = getline(a:lineNum)
     let indentation = s:simplechecklistGetIndent(a:lineNum)
-    let lineContentNoindent = substitute(lineContent, '^\s*', '', '')
+    let lineContentNoindent = trim(lineContent)
     let checkifiedLine = indentation . s:simplechecklist_format . lineContentNoindent 
     call setline(a:lineNum, checkifiedLine)
     call feedkeys("\<esc>A", "n")
