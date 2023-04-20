@@ -18,7 +18,7 @@ simplechecklist.vim is active only for filetype `.chk`, which includes highlight
 vim TODO.chk
 ```
 
-Ones in vim/neovim all newlines will create a new checklist entry. E.g.:
+Once in vim/neovim all newlines will create a new checklist entry. E.g.:
 ```
 -> [ ] Add README
 -> [ ] 
